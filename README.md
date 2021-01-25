@@ -6,6 +6,11 @@ Utilising the Laravel framework
 
 * Fetches card data from the respective APIs
 * Creates routes for each game
-* The HTML produced from Blade includes a Vue game component mounted which has the card data.
+* The HTML produced from Blade includes a Vue card component mounted which has the card data and displays the cards.
 
-Using the [Laravel Export package](https://github.com/spatie/laravel-export) generate a static site.
+Using the [Laravel Export package](https://github.com/spatie/laravel-export) a static site is generated.
+
+## Roadmap
+
+* Create a Vue game component to actually play the game (with a crude algorithm for choosing the computer players choice)
+* Enhanced algorithm using machine learning
