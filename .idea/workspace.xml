@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b10bad7-ef5f-48ff-8cc6-b5a224161046" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Api/DataTransformer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Capability.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Card.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,6 +153,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -163,7 +171,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611330121175</updated>
       <workItem from="1611330122210" duration="1498000" />
-      <workItem from="1611572856392" duration="605000" />
+      <workItem from="1611572856392" duration="4013000" />
     </task>
     <servers />
   </component>
@@ -171,9 +179,21 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1611572860067">
+    <state x="770" y="263" width="441" height="595" key="#com.intellij.ide.util.MemberChooser" timestamp="1611591370465">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611572860067" />
+    <state x="770" y="263" width="441" height="595" key="#com.intellij.ide.util.MemberChooser/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611591370465" />
+    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1611585487506">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611585487506" />
+    <state x="762" y="273" width="481" height="582" key="NewPhpClassDialog" timestamp="1611590902221">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="762" y="273" width="481" height="582" key="NewPhpClassDialog/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611590902221" />
+    <state x="485" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1611590859896">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611590859896" />
   </component>
 </project>
