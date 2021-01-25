@@ -16,10 +16,11 @@ class Card implements JsonSerializable
 
     public function __construct(string $name, array $capabilitiesData)
     {
-        $this->name = $name;
+        $this->name         = $name;
+        $this->capabilities = new Collection();
 
         foreach ($capabilitiesData as $capabilityKey => $capabilityValue) {
-            $this->addCapability(new Capability());
+            $this->addCapability(new Capability($capabilityKey, $capabilityValue));
         }
     }
 
@@ -28,8 +29,11 @@ class Card implements JsonSerializable
         $this->capabilities->add($capability);
     }
 
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
-        // TODO: Implement jsonSerialize() method.
+        return [
+            'name'         => $this->name,
+            'capabilities' => $this->capabilities,
+        ];
     }
 }
