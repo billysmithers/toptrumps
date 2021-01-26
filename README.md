@@ -12,6 +12,8 @@ Using the [Laravel Export package](https://github.com/spatie/laravel-export) a s
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6cd61d2a-b4a5-44f7-a497-7867061499fa/deploy-status)](https://app.netlify.com/sites/toptrumps/deploys)
 
+[Online demo](https://toptrumps.netlify.app)
+
 ## Roadmap
 
 * Create a Vue game component to actually play the game (with a crude algorithm for choosing the computer players choice)
