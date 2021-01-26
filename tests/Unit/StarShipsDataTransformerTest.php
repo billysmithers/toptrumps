@@ -5,6 +5,7 @@ namespace Tests\Unit;
 
 use App\Api\StarWars\StarshipsDataTransformer;
 use App\Models\Card;
+use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
 class StarShipsDataTransformerTest extends TestCase
@@ -44,6 +45,26 @@ class StarShipsDataTransformerTest extends TestCase
                     ]
                 )
             )
+        );
+    }
+
+    public function testThrowsExceptionIfNoName()
+    {
+        $this->expectException(InvalidArgumentException::class);
+
+        StarshipsDataTransformer::transformForCard(
+            [
+                'model'                  => 'DS-1 Orbital Battle Station',
+                'cost_in_credits'        => '1000000000000',
+                'length'                 => '120000',
+                'max_atmosphering_speed' => 'n/a',
+                'crew'                   => '342,953',
+                'passengers'             => '843,342',
+                'cargo_capacity'         => '1000000000000',
+                'consumables'            => '3 years',
+                'hyperdrive_rating'      => '4.0',
+                'MGLT'                   => '10',
+            ]
         );
     }
 }
