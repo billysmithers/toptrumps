@@ -3,7 +3,7 @@
 namespace Tests\Unit;
 
 
-use App\Api\StarWars\StarshipsDataTransformer;
+use App\Transformers\StarWars\StarshipsDataTransformer;
 use App\Models\Card;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
