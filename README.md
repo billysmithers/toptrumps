@@ -19,3 +19,4 @@ Using the [Laravel Export package](https://github.com/spatie/laravel-export) a s
 * Create a Vue game component to actually play the game (with a crude algorithm for choosing the computer players choice)
 * Enhanced algorithm using machine learning
 * Add support for card date values
+* Make the app a PWA (game should be able to be played offline)
