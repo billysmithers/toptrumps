@@ -7,7 +7,8 @@ use App\Models\Card;
 interface DataTransformer
 {
     /**
-     * @return Card[]
+     * @param array $apiResponse
+     * @return Card
      */
-    public function transformForCard(): array;
+    public static function transformForCard(array $apiResponse): Card;
 }
