@@ -45,7 +45,7 @@ class Fetcher
         return $starships;
     }
 
-    public function fetchPage(string $nextUrl = null): array
+    private function fetchPage(string $nextUrl = null): array
     {
         try {
             if ($nextUrl) {

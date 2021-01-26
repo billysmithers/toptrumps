@@ -10,10 +10,7 @@ use Psr\Http\Message\ResponseInterface;
 
 class MockClient extends Client
 {
-    /**
-     * @var HttpClient
-     */
-    private $httpClient;
+    private HttpClient $httpClient;
 
     public function __construct(
         ?array $queue = null,
