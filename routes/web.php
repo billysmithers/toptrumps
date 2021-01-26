@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StarWarsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/star-wars/starships', function () {
+    return view('welcome');
+});
+
+Route::group([
+    'namespace'  => 'App\Http\Controllers',
+], function () {
+    Route::group([
+        'prefix' => '/star-wars',
+    ], function () {
+        Route::get('/starships', [
+            'uses' => 'StarWarsController@starships',
+            'as' => 'star-wars.starships',
+        ]);
+    });
 });
