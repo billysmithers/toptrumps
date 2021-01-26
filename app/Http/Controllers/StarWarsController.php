@@ -18,6 +18,12 @@ class StarWarsController extends BaseController
             $cards[] = StarshipsDataTransformer::transformForCard($starship);
         }
 
-        return View::make('cards', ['cards' => json_decode(json_encode($cards))]);
+        return View::make(
+            'cards',
+            [
+                'game'  => 'Star Wars Starships',
+                'cards' => json_decode(json_encode($cards)),
+            ]
+        );
     }
 }
