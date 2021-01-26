@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b10bad7-ef5f-48ff-8cc6-b5a224161046" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Api/StarWars/StarshipsDataTransformer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Unit/StarShipsDataTransformerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Api/Fetcher.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/games.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Api/DataTransformer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Api/DataTransformer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Api/StarWars/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Api/StarWars/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Api/StarWars/Starship/Fetcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Api/StarWars/StarshipFetcher.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StarWarsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StarWarsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/starwars.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/api/starwars.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/Api/StarWars/Starship/FetcherTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Api/StarWars/Starship/FetcherTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +147,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests/Unit" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/storage/dist" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -154,8 +161,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config/api" />
+      <recent name="$PROJECT_DIR$/tests/Shared/StarWars" />
+      <recent name="$PROJECT_DIR$/app/Api/StarWars/Starship" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/tests/Unit" />
+      <recent name="$PROJECT_DIR$/storage/dist" />
+      <recent name="$PROJECT_DIR$/tests/Feature" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers" />
+      <recent name="$PROJECT_DIR$/tests/Shared" />
+      <recent name="$PROJECT_DIR$/tests/Feature/Api/StarWars/Starship" />
     </key>
   </component>
   <component name="RunManager">
@@ -173,7 +189,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611330121175</updated>
       <workItem from="1611330122210" duration="1498000" />
-      <workItem from="1611572856392" duration="8977000" />
+      <workItem from="1611572856392" duration="28103000" />
     </task>
     <servers />
   </component>
@@ -185,25 +201,46 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="770" y="263" width="441" height="595" key="#com.intellij.ide.util.MemberChooser/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611591370465" />
-    <state x="735" y="309" width="503" height="503" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611594057983">
+    <state x="391" y="154" width="480" height="246" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1611698151943">
+      <screen x="72" y="27" width="888" height="513" />
+    </state>
+    <state x="735" y="309" width="503" height="503" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611665071450" />
+    <state x="391" y="154" width="480" height="246" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.27.888.513/72.27.888.513@72.27.888.513" timestamp="1611698151943" />
+    <state x="388" y="160" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611698312999">
+      <screen x="72" y="27" width="888" height="513" />
+    </state>
+    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611671750836" />
+    <state x="388" y="160" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.888.513/72.27.888.513@72.27.888.513" timestamp="1611698312999" />
+    <state x="480" y="275" width="476" height="265" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1" timestamp="1611698172433">
+      <screen x="72" y="27" width="888" height="513" />
+    </state>
+    <state x="480" y="275" width="476" height="265" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/72.27.888.513/72.27.888.513@72.27.888.513" timestamp="1611698172433" />
+    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1611665368274">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="735" y="309" width="503" height="503" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611594057983" />
-    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611594847623">
-      <screen x="72" y="27" width="1848" height="1053" />
+    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611665368274" />
+    <state x="404" y="22" width="457" height="513" key="NewPhpClassDialog" timestamp="1611698042375">
+      <screen x="72" y="27" width="888" height="513" />
     </state>
-    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611594847623" />
-    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1611585487506">
-      <screen x="72" y="27" width="1848" height="1053" />
+    <state x="762" y="273" width="561" height="596" key="NewPhpClassDialog/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611679303559" />
+    <state x="404" y="22" width="457" height="513" key="NewPhpClassDialog/72.27.888.513/72.27.888.513@72.27.888.513" timestamp="1611698042375" />
+    <state x="417" y="242" width="249" height="161" key="NewPhpFileDialog" timestamp="1611697652981">
+      <screen x="72" y="27" width="888" height="513" />
     </state>
-    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611585487506" />
-    <state x="762" y="273" width="529" height="582" key="NewPhpClassDialog" timestamp="1611593733694">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="762" y="273" width="529" height="582" key="NewPhpClassDialog/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611593733694" />
+    <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611674012069" />
+    <state x="417" y="242" width="249" height="161" key="NewPhpFileDialog/72.27.888.513/72.27.888.513@72.27.888.513" timestamp="1611697652981" />
     <state x="485" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1611590859896">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611590859896" />
+    <state x="72" y="27" width="621" height="513" key="find.popup" timestamp="1611697570614">
+      <screen x="72" y="27" width="888" height="513" />
+    </state>
+    <state x="72" y="27" width="621" height="513" key="find.popup/72.27.888.513/72.27.888.513@72.27.888.513" timestamp="1611697570614" />
+    <state x="384" y="231" width="485" height="178" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1611699286747">
+      <screen x="72" y="27" width="888" height="513" />
+    </state>
+    <state x="721" y="467" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611680141692" />
+    <state x="384" y="231" width="485" height="178" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/72.27.888.513/72.27.888.513@72.27.888.513" timestamp="1611699286747" />
   </component>
 </project>

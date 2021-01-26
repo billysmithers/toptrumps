@@ -8,7 +8,7 @@ Utilising the Laravel framework
 * Creates routes for each game
 * The HTML produced from Blade includes a Vue card component mounted which has the card data and displays the cards.
 
-Using the [Laravel Export package](https://github.com/spatie/laravel-export) a static site is generated.
+Running `php artisan static-site:build` a static site is built in `storage\dist`.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6cd61d2a-b4a5-44f7-a497-7867061499fa/deploy-status)](https://app.netlify.com/sites/toptrumps/deploys)
 
@@ -16,6 +16,7 @@ Using the [Laravel Export package](https://github.com/spatie/laravel-export) a s
 
 ## Roadmap
 
+* Add caching for the API calls so as not to hammer the APIs
 * Create a Vue game component to actually play the game (with a crude algorithm for choosing the computer players choice)
 * Enhanced algorithm using machine learning
 * Add support for card date values

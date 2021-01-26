@@ -10,7 +10,7 @@ class Client extends GuzzleClient
     public function __construct(array $config = [])
     {
         parent::__construct(array_merge([
-            'base_uri' => Config::get('starwars.base_uri'),
+            'base_uri' => Config::get('api.starwars.base_uri'),
         ], $config));
     }
 }

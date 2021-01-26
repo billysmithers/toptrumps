@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\Api\StarWars\Starship;
 
-use App\Api\StarWars\Starship\Fetcher;
+use App\Api\StarWars\StarshipFetcher;
 use GuzzleHttp\Psr7\Response;
 use Illuminate\Support\Facades\Config;
 use Tests\Shared\StarWars\MockClient as Client;
@@ -18,7 +18,7 @@ class FetcherTest extends TestCase
                 [],
                 json_encode(
                     [
-                        'next'    => Config::get('starwars.base_uri') . 'starships/?page=2',
+                        'next'    => Config::get('api.starwars.base_uri') . 'starships/?page=2',
                         'results' => [
                             [
                                 'name' => 'Death Star'
@@ -42,7 +42,7 @@ class FetcherTest extends TestCase
             ),
         ]);
 
-        $fetcher = new Fetcher($client);
+        $fetcher = new StarshipFetcher($client);
 
         $this->assertEquals(
             [
@@ -53,7 +53,7 @@ class FetcherTest extends TestCase
                     'name' => 'Millenium Falcon'
                 ]
             ],
-            $fetcher->fetchAll()
+            $fetcher->fetch()
         );
     }
 }

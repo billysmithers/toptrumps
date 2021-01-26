@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Api\StarWars\Starship;
+namespace App\Api\StarWars;
 
-use App\Api\StarWars\Client;
+use App\Api\Fetcher;
 use App\Constants\LogTypes;
 use App\Traits\LogsApiException;
 use GuzzleHttp\Exception\GuzzleException;
@@ -10,7 +10,7 @@ use http\Message;
 use Illuminate\Support\Facades\Log;
 use JsonException;
 
-class Fetcher
+class StarshipFetcher implements Fetcher
 {
     use LogsApiException;
 
@@ -21,7 +21,7 @@ class Fetcher
         $this->client = $client;
     }
 
-    public function fetchAll(): array
+    public function fetch(): array
     {
         $starships = [];
         $page      = $this->fetchPage();
