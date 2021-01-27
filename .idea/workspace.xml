@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b10bad7-ef5f-48ff-8cc6-b5a224161046" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/cards.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cards.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/server.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +181,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611330121175</updated>
       <workItem from="1611330122210" duration="1498000" />
-      <workItem from="1611572856392" duration="33957000" />
+      <workItem from="1611572856392" duration="37869000" />
     </task>
     <servers />
   </component>
@@ -224,10 +226,10 @@
     </state>
     <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611590859896" />
     <state x="72" y="22" width="888" height="513" key="SettingsEditor/72.27.888.513/72.27.888.513@72.27.888.513" timestamp="1611751007317" />
-    <state x="72" y="27" width="621" height="513" key="find.popup" timestamp="1611697570614">
+    <state x="72" y="27" width="621" height="513" key="find.popup" timestamp="1611752546031">
       <screen x="72" y="27" width="888" height="513" />
     </state>
-    <state x="72" y="27" width="621" height="513" key="find.popup/72.27.888.513/72.27.888.513@72.27.888.513" timestamp="1611697570614" />
+    <state x="72" y="27" width="621" height="513" key="find.popup/72.27.888.513/72.27.888.513@72.27.888.513" timestamp="1611752546031" />
     <state x="384" y="216" width="485" height="178" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1611750148007">
       <screen x="72" y="27" width="888" height="513" />
     </state>
