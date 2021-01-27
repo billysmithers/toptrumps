@@ -8,10 +8,10 @@
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
-    <body class="bg-black font-mono">
+    <body class="bg-{{ $backgroundColour }} font-mono text-white">
         <div class="container mx-auto md:px-24 lg:px-52">
-            <a href="/" class="text-white p-4">Games</a>
-            <h1 class="text-center text-3xl text-white m-10">{{ $game }}</h1>
+            <a href="/" class="p-4">Games</a>
+            <h1 class="text-center text-3xl m-10">{{ $game }}</h1>
 
             <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
                 @foreach ($cards as $card)
@@ -37,7 +37,7 @@
                                                 <td class="px-2 py-2 text-gray-500 font-semibold">
                                                     {{ $capability->capability }}
                                                 </td>
-                                                <td class="px-2 py-2">
+                                                <td class="px-2 py-2 text-black">
                                                     {{ $capability->value }}
                                                 </td>
                                             </tr>
@@ -49,6 +49,7 @@
                     </div>
                 @endforeach
             </div>
+            <footer class="text-center">{{ $credits }}</footer>
         </div>
     </body>
 </html>
