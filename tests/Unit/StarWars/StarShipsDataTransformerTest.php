@@ -1,10 +1,9 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\Unit\StarWars;
 
-
-use App\Transformers\StarWars\StarshipsDataTransformer;
 use App\Models\Card;
+use App\Transformers\StarWars\StarshipsDataTransformer;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 

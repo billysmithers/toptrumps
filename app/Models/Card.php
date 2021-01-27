@@ -16,9 +16,12 @@ class Card implements JsonSerializable
      */
     private Collection $capabilities;
 
-    public function __construct(string $name, array $capabilitiesData)
+    private ?string $imageUrl;
+
+    public function __construct(string $name, array $capabilitiesData, string $imageUrl = null)
     {
         $this->name         = $name;
+        $this->imageUrl    = $imageUrl;
         $this->capabilities = new Collection();
 
         foreach ($capabilitiesData as $capabilityKey => $capabilityValue) {
@@ -36,6 +39,7 @@ class Card implements JsonSerializable
         return [
             'name'         => $this->name,
             'capabilities' => $this->capabilities,
+            'imageUrl'     => $this->imageUrl,
         ];
     }
 }

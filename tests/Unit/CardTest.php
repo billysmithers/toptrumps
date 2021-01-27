@@ -13,9 +13,10 @@ class CardTest extends TestCase
             'Ford Mustang',
             [
                 'year'             => 1972,
-                'engine-size (cc)' => 2000,
+                'engine_size_(cc)' => 2000,
                 'wheels'           => 4,
-            ]
+            ],
+            'https://cdn.example.com/image.jpg'
         );
 
         $this->assertEquals(
@@ -28,14 +29,15 @@ class CardTest extends TestCase
                             'value'      => 1972,
                         ],
                         [
-                            'capability' => 'engine-size (cc)',
+                            'capability' => 'engine size (cc)',
                             'value'      => 2000,
                         ],
                         [
                             'capability' => 'wheels',
                             'value'      => 4,
                         ],
-                    ]
+                    ],
+                    'imageUrl'      => 'https://cdn.example.com/image.jpg',
                 ]
             ),
             json_encode($card)

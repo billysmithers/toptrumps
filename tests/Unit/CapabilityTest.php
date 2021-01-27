@@ -22,7 +22,7 @@ class CapabilityTest extends TestCase
             json_encode($capability)
         );
 
-        $capability = new Capability('weight (kg)', 1000.97);
+        $capability = new Capability('weight_(kg)', 1000.97);
 
         $this->assertEquals(
             json_encode(

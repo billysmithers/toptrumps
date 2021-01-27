@@ -29,7 +29,7 @@ class Capability implements JsonSerializable
     public function jsonSerialize(): array
     {
         return [
-            'capability' => $this->capability,
+            'capability' => str_replace(['_', '-'], ' ', $this->capability),
             'value'      => $this->value,
         ];
     }

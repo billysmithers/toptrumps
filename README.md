@@ -24,6 +24,12 @@ or using sail
 
 [Online demo](https://toptrumps.netlify.app)
 
+## Adding a theme / game
+* Create a `Client` and `Fetcher` in the app Api namespace
+* Create a `DataTransformer` in the app Transformers namespace
+* Write unit tests for the `Fetcher` and `Transformer` (see the Star Wars examples in `tests`)
+* Add the theme / game config to `config/games.php`
+
 ## Roadmap
 
 * Add caching for the API calls so as not to hammer the APIs

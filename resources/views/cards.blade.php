@@ -17,19 +17,19 @@
                 @foreach ($cards as $card)
                     <div class="max-w-xs m-4">
                         <div class="bg-white shadow-xl rounded-lg py-3">
+                            <h3 class="text-center text-xl text-gray-900 font-medium leading-8">
+                                {{ $card->name }}
+                            </h3>
                             @if (! empty($card->imageUrl))
                                 <div class="photo-wrapper p-2">
                                     <img
-                                        class="w-32 h-32 rounded-full mx-auto"
+                                        class="w-48 h-48 mx-auto"
                                         src="{{ $card->imageUrl }}"
                                         alt="Image of {{ $card->name }}"
                                     >
                                 </div>
                             @endif
                             <div class="p-2">
-                                <h3 class="text-center text-xl text-gray-900 font-medium leading-8">
-                                    {{ $card->name }}
-                                </h3>
                                 <table class="text-xs my-3">
                                     <tbody>
                                         @foreach ($card->capabilities as $capability)

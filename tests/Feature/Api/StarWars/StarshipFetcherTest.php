@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\Api\StarWars\Starship;
+namespace Tests\Feature\Api\StarWars;
 
 use App\Api\StarWars\StarshipFetcher;
 use GuzzleHttp\Psr7\Response;
@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Config;
 use Tests\Shared\StarWars\MockClient as Client;
 use Tests\TestCase;
 
-class FetcherTest extends TestCase
+class StarshipFetcherTest extends TestCase
 {
     public function testFetchesStarships()
     {
