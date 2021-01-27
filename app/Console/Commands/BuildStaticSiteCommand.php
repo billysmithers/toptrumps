@@ -46,6 +46,23 @@ class BuildStaticSiteCommand extends Command
             }
         }
 
+        $blacklist = [
+            '.htaccess',
+            'index.php',
+        ];
+
+        $files = Storage::disk('app-public')->allFiles();
+
+        foreach ($files as $filePath) {
+            if (in_array($filePath, $blacklist)) {
+                continue;
+            }
+
+            $file = Storage::disk('app-public')->get($filePath);
+
+            Storage::put($filePath, $file);
+        }
+
         $this->info('Site built.');
     }
 }

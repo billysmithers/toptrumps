@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b10bad7-ef5f-48ff-8cc6-b5a224161046" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Api/Fetcher.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/games.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Api/StarWars/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Api/StarWars/Client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Api/StarWars/Starship/Fetcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Api/StarWars/StarshipFetcher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/StarWarsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/StarWarsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/starwars.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/api/starwars.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/Api/StarWars/Starship/FetcherTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/Api/StarWars/Starship/FetcherTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +179,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611330121175</updated>
       <workItem from="1611330122210" duration="1498000" />
-      <workItem from="1611572856392" duration="28103000" />
+      <workItem from="1611572856392" duration="28867000" />
     </task>
     <servers />
   </component>
