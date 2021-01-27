@@ -21,7 +21,18 @@ class BuildStaticSiteCommand extends Command
 
     public function handle()
     {
-        foreach (Config::get('games') as $theme => $game) {
+        $games = Config::get('games');
+
+        $this->buildGames($games);
+
+        $this->copyPublic();
+
+        $this->info('Site built.');
+    }
+
+    private function buildGames(array $games): void
+    {
+        foreach ($games as $theme => $game) {
             foreach ($game as $gameKey => $params) {
                 $fetcher = App::make($params['fetcher']);
                 $cards   = [];
@@ -36,7 +47,7 @@ class BuildStaticSiteCommand extends Command
                 Storage::put(
                     $path . DIRECTORY_SEPARATOR . 'index.html',
                     View::make(
-                    'cards',
+                        'cards',
                         [
                             'game'  => $params['name'],
                             'cards' => json_decode(json_encode($cards)),
@@ -45,7 +56,10 @@ class BuildStaticSiteCommand extends Command
                 );
             }
         }
+    }
 
+    private function copyPublic()
+    {
         $blacklist = [
             '.htaccess',
             'index.php',
@@ -62,7 +76,5 @@ class BuildStaticSiteCommand extends Command
 
             Storage::put($filePath, $file);
         }
-
-        $this->info('Site built.');
     }
 }
