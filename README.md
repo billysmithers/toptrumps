@@ -17,7 +17,8 @@ It utilises the Laravel framework to
 or using sail
 
 * Run `./vendor/bin/sail up`
-* Run `php artisan static-site:build`
+* Run `docker exec -it top-trumps_laravel.test_1 bash` to enter the test app container
+* Run `php artisan static-site:build` from within the container
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6cd61d2a-b4a5-44f7-a497-7867061499fa/deploy-status)](https://app.netlify.com/sites/toptrumps/deploys)
 
@@ -32,3 +33,4 @@ or using sail
 * Make the app a PWA (game should be able to be played offline)
 * Web sockets for multiplayer support
 * Create CSS themes for different game themes i.e. Star Wars, Rick and Morty, Lego
+* Games config to be split by themes in a games folder - make it easier to add themes and games to existing themes
