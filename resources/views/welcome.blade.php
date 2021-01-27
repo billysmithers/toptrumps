@@ -11,16 +11,24 @@
     <body class="bg-black font-mono">
         <h1 class="text-center text-3xl text-white m-10">Top Trumps</h1>
 
-        <h2 class="text-center text-2xl text-white m-10">Please select a game</h2>
+        <h2 class="text-center text-2xl text-white m-10">Please select a game from the themes below</h2>
 
-        <div class="max-w-xs m-4">
-            <div class="bg-white shadow-xl rounded-lg py-3">
-                <div class="p-2">
-                    <h3 class="text-center text-xl text-gray-900 font-medium leading-8">
-                        <a href="{{ route('star-wars.starships') }}">Star Wars Starships</a>
-                    </h3>
-                </div>
+        @foreach ($games as $themeKey => $theme)
+            <h3 class="text-center text-xl text-white m-10">{{ $theme['name'] }}</h3>
+
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+                @foreach ($theme['games'] as $gameKey => $game)
+                    <div class="max-w-xs m-4">
+                        <div class="bg-white shadow-xl rounded-lg py-3">
+                            <div class="p-2">
+                                <h4 class="text-center text-xl text-gray-900 font-medium leading-8">
+                                    <a href="{{ $themeKey }}/{{ $gameKey }}/">{{ $game['name'] }}</a>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
-        </div>
+        @endforeach
     </body>
 </html>

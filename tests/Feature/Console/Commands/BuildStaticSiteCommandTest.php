@@ -13,14 +13,15 @@ class BuildStaticSiteCommandTest extends TestCase
         Storage::fake();
 
         $this->artisan('static-site:build')
-            ->expectsOutput('Site built.');
+            ->expectsOutput('Building static site...')
+            ->expectsOutput('Static site built.');
 
         Storage::exists('css/app.css');
         Storage::exists('js/app.js');
 
-        foreach (Config::get('games') as $theme => $game) {
-            foreach ($game as $gameKey => $params) {
-                Storage::exists($theme . DIRECTORY_SEPARATOR . $gameKey . DIRECTORY_SEPARATOR . 'index.html');
+        foreach (Config::get('games') as $themeKey => $themeParams) {
+            foreach ($themeParams['games'] as $gameKey => $gameParams) {
+                Storage::exists($themeKey . DIRECTORY_SEPARATOR . $gameKey . DIRECTORY_SEPARATOR . 'index.html');
             }
         }
     }

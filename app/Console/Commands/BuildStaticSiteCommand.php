@@ -21,35 +21,50 @@ class BuildStaticSiteCommand extends Command
 
     public function handle()
     {
+        $this->info('Building static site...');
+
         $games = Config::get('games');
+
+        $this->buildWelcome($games);
 
         $this->buildGames($games);
 
         $this->copyPublic();
 
-        $this->info('Site built.');
+        $this->info('Static site built.');
+    }
+
+    private function buildWelcome(array $games): void
+    {
+        Storage::put(
+            'index.html',
+            View::make(
+                'welcome',
+                ['games' => $games]
+            )
+        );
     }
 
     private function buildGames(array $games): void
     {
-        foreach ($games as $theme => $game) {
-            foreach ($game as $gameKey => $params) {
-                $fetcher = App::make($params['fetcher']);
+        foreach ($games as $themeKey => $themeParams) {
+            foreach ($themeParams['games'] as $gameKey => $gameParams) {
+                $fetcher = App::make($gameParams['fetcher']);
                 $cards   = [];
                 $data    = $fetcher->fetch();
 
-                foreach($data as $datum) {
-                    $cards[] = $params['transformer']::transformForCard($datum);
+                foreach ($data as $datum) {
+                    $cards[] = $gameParams['transformer']::transformForCard($datum);
                 }
 
-                $path = $theme . DIRECTORY_SEPARATOR . $gameKey;
+                $path = $themeKey . DIRECTORY_SEPARATOR . $gameKey;
 
                 Storage::put(
                     $path . DIRECTORY_SEPARATOR . 'index.html',
                     View::make(
                         'cards',
                         [
-                            'game'  => $params['name'],
+                            'game'  => $gameParams['name'],
                             'cards' => json_decode(json_encode($cards)),
                         ]
                     )
