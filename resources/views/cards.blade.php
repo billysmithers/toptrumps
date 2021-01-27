@@ -11,7 +11,7 @@
     <body class="bg-black font-mono">
         <h1 class="text-center text-3xl text-white m-10">{{ $game }}</h1>
 
-        <div class="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-6">
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
             @foreach ($cards as $card)
                 <div class="max-w-xs m-4">
                     <div class="bg-white shadow-xl rounded-lg py-3">
