@@ -3,8 +3,8 @@
 namespace Tests\Unit;
 
 use App\Models\Capability;
+use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
-use TypeError;
 
 class CapabilityTest extends TestCase
 {
@@ -15,8 +15,8 @@ class CapabilityTest extends TestCase
         $this->assertEquals(
             json_encode(
                 [
-                    'key'   => 'year',
-                    'value' => 1972,
+                    'capability' => 'year',
+                    'value'      => 1972,
                 ]
             ),
             json_encode($capability)
@@ -27,8 +27,8 @@ class CapabilityTest extends TestCase
         $this->assertEquals(
             json_encode(
                 [
-                    'key'   => 'weight (kg)',
-                    'value' => 1000.97,
+                    'capability' => 'weight (kg)',
+                    'value'      => 1000.97,
                 ]
             ),
             json_encode($capability)
@@ -37,7 +37,7 @@ class CapabilityTest extends TestCase
 
     public function testThrowsErrorOnInvalidData(): void
     {
-        $this->expectException(TypeError::class);
+        $this->expectException(InvalidArgumentException::class);
         new Capability('year', '900 AD');
     }
 }

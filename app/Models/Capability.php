@@ -4,25 +4,33 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use InvalidArgumentException;
 use JsonSerializable;
 
 class Capability implements JsonSerializable
 {
-    private string $key;
+    private string $capability;
 
-    private int|float $value;
+    /**
+     * @var int|float
+     */
+    private $value;
 
-    public function __construct(string $key, int|float $value)
+    public function __construct(string $capability, $value)
     {
-        $this->key   = $key;
-        $this->value = $value;
+        if (! is_numeric($value)) {
+            throw new InvalidArgumentException('A capability value must be numeric.');
+        }
+
+        $this->capability = $capability;
+        $this->value      = $value;
     }
 
     public function jsonSerialize(): array
     {
         return [
-            'key'   => $this->key,
-            'value' => $this->value,
+            'capability' => $this->capability,
+            'value'      => $this->value,
         ];
     }
 }

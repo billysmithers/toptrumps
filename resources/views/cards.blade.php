@@ -33,7 +33,7 @@
                                     @foreach ($card->capabilities as $capability)
                                         <tr>
                                             <td class="px-2 py-2 text-gray-500 font-semibold{{ $loop->index % 2 === 0 ? ' bg-gray-100' : '' }}">
-                                                {{ $capability->key }}
+                                                {{ $capability->capability }}
                                             </td>
                                             <td class="px-2 py-2{{ $loop->index % 2 === 0 ? ' bg-gray-100' : '' }}">
                                                 {{ $capability->value }}

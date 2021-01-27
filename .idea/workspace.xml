@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b10bad7-ef5f-48ff-8cc6-b5a224161046" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netlify.toml" beforeDir="false" afterPath="$PROJECT_DIR$/netlify.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +138,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/storage/dist" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -157,11 +158,11 @@
       <recent name="$PROJECT_DIR$/app/Api/StarWars/Starship" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/tests/Feature/Console/Commands" />
       <recent name="$PROJECT_DIR$/storage/dist" />
       <recent name="$PROJECT_DIR$/tests/Feature" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers" />
-      <recent name="$PROJECT_DIR$/tests/Shared" />
-      <recent name="$PROJECT_DIR$/tests/Feature/Api/StarWars/Starship" />
     </key>
   </component>
   <component name="RunManager">
@@ -179,7 +180,7 @@
       <option name="presentableId" value="Default" />
       <updated>1611330121175</updated>
       <workItem from="1611330122210" duration="1498000" />
-      <workItem from="1611572856392" duration="28867000" />
+      <workItem from="1611572856392" duration="32601000" />
     </task>
     <servers />
   </component>
@@ -219,18 +220,19 @@
     </state>
     <state x="791" y="479" width="399" height="156" key="NewPhpFileDialog/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611674012069" />
     <state x="417" y="242" width="249" height="161" key="NewPhpFileDialog/72.27.888.513/72.27.888.513@72.27.888.513" timestamp="1611697652981" />
-    <state x="485" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1611590859896">
-      <screen x="72" y="27" width="1848" height="1053" />
+    <state x="72" y="22" width="888" height="513" key="SettingsEditor" timestamp="1611751007317">
+      <screen x="72" y="27" width="888" height="513" />
     </state>
     <state x="485" y="188" width="1022" height="737" key="SettingsEditor/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611590859896" />
+    <state x="72" y="22" width="888" height="513" key="SettingsEditor/72.27.888.513/72.27.888.513@72.27.888.513" timestamp="1611751007317" />
     <state x="72" y="27" width="621" height="513" key="find.popup" timestamp="1611697570614">
       <screen x="72" y="27" width="888" height="513" />
     </state>
     <state x="72" y="27" width="621" height="513" key="find.popup/72.27.888.513/72.27.888.513@72.27.888.513" timestamp="1611697570614" />
-    <state x="384" y="231" width="485" height="178" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1611699286747">
+    <state x="384" y="216" width="485" height="178" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1611750148007">
       <screen x="72" y="27" width="888" height="513" />
     </state>
     <state x="721" y="467" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/72.27.1848.1053/72.27.1848.1053@72.27.1848.1053" timestamp="1611680141692" />
-    <state x="384" y="231" width="485" height="178" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/72.27.888.513/72.27.888.513@72.27.888.513" timestamp="1611699286747" />
+    <state x="384" y="216" width="485" height="178" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/72.27.888.513/72.27.888.513@72.27.888.513" timestamp="1611750148007" />
   </component>
 </project>

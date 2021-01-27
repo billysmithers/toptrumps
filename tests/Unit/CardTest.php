@@ -24,16 +24,16 @@ class CardTest extends TestCase
                     'name'         => 'Ford Mustang',
                     'capabilities' => [
                         [
-                            'key'   => 'year',
-                            'value' => 1972,
+                            'capability' => 'year',
+                            'value'      => 1972,
                         ],
                         [
-                            'key'   => 'engine-size (cc)',
-                            'value' => 2000,
+                            'capability' => 'engine-size (cc)',
+                            'value'      => 2000,
                         ],
                         [
-                            'key'   => 'wheels',
-                            'value' => 4,
+                            'capability' => 'wheels',
+                            'value'      => 4,
                         ],
                     ]
                 ]
