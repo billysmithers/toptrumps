@@ -1,8 +1,5 @@
 <?php
 
-use App\Http\Controllers\StarWarsController;
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,20 +10,3 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::group([
-    'namespace'  => 'App\Http\Controllers',
-], function () {
-    Route::group([
-        'prefix' => '/star-wars',
-    ], function () {
-        Route::get('/starships', [
-            'uses' => 'StarWarsController@starships',
-            'as' => 'star-wars.starships',
-        ]);
-    });
-});
