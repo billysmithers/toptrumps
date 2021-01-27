@@ -43,7 +43,7 @@ class SetsDataTransformer implements DataTransformer
             }
         }
 
-        $capabilities['set_num'] = (int) str_replace('-', '', $data['set_num']);
+        $capabilities['set_num'] = (int) explode('-', $data['set_num'])[0];
 
         unset($capabilities['theme_id']);
 

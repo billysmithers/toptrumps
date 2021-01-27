@@ -16,7 +16,7 @@ class SetsDataTransformerTest extends TestCase
             [
                 'year'      => 1978,
                 'num_parts' => 12,
-                'set_num'   => 112,
+                'set_num'   => 11,
             ],
             'https://cdn.rebrickable.com/media/sets/0011-2/3318.jpg'
         );
