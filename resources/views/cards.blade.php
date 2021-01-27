@@ -8,7 +8,7 @@
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
-    <body class="bg-{{ $backgroundColour }} font-mono text-white">
+    <body class="bg-blue-400 font-mono text-white">
         <div class="container mx-auto md:px-24 lg:px-52">
             <a href="/" class="p-4">Games</a>
             <h1 class="text-center text-3xl m-10">{{ $game }}</h1>

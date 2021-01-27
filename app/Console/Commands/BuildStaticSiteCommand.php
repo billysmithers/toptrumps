@@ -64,10 +64,9 @@ class BuildStaticSiteCommand extends Command
                     View::make(
                         'cards',
                         [
-                            'game'             => $gameParams['name'],
-                            'backgroundColour' => $gameParams['backgroundColour'],
-                            'cards'            => json_decode(json_encode($cards)),
-                            'credits'          => $gameParams['credits'],
+                            'game'    => $gameParams['name'],
+                            'cards'   => json_decode(json_encode($cards)),
+                            'credits' => $gameParams['credits'],
                         ]
                     )
                 );
