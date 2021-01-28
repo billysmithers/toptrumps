@@ -2,13 +2,13 @@
 
 namespace Tests\Feature\Api\StarWars;
 
-use App\Api\StarWars\StarshipFetcher;
+use App\Api\StarWars\StarshipsFetcher;
 use GuzzleHttp\Psr7\Response;
 use Illuminate\Support\Facades\Config;
 use Tests\Shared\StarWars\MockClient as Client;
 use Tests\TestCase;
 
-class StarshipFetcherTest extends TestCase
+class StarshipsFetcherTest extends TestCase
 {
     public function testFetchesStarships()
     {
@@ -42,7 +42,7 @@ class StarshipFetcherTest extends TestCase
             ),
         ]);
 
-        $fetcher = new StarshipFetcher($client);
+        $fetcher = new StarshipsFetcher($client);
 
         $this->assertEquals(
             [

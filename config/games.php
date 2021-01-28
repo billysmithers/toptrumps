@@ -6,8 +6,14 @@ return [
         'games' => [
             'starships' => [
                 'name'        => 'Star Wars Starships',
-                'fetcher'     => \App\Api\StarWars\StarshipFetcher::class,
-                'transformer' => \App\Transformers\StarWars\StarshipsDataTransformer::class,
+                'fetcher'     => \App\Api\StarWars\StarshipsFetcher::class,
+                'transformer' => \App\Transformers\StarWars\TransportDataTransformer::class,
+                'credits'     => 'Data supplied by https://swapi.dev',
+            ],
+            'vehicles' => [
+                'name'        => 'Star Wars Vehicles',
+                'fetcher'     => \App\Api\StarWars\VehiclesFetcher::class,
+                'transformer' => \App\Transformers\StarWars\TransportDataTransformer::class,
                 'credits'     => 'Data supplied by https://swapi.dev',
             ],
         ],
