@@ -2,7 +2,8 @@
 Top Trumps game to showcase fetching data from APIs, uniforming the data,
 caching and rendering the cards to a web based interface.
 
-It utilises the Laravel framework to
+It utilises the Laravel framework to act as an API Gateway and then build a static site as the User Interface.
+The following tasks are performed to achieve this: 
 
 * Build a static site from game config which in turn
 * Fetches card data from the respective APIs
@@ -38,5 +39,5 @@ or using sail
 * Add support for card date values
 * Make the app a PWA (game should be able to be played offline)
 * Web sockets for multiplayer support
-* Create CSS themes for different game themes i.e. Star Wars, Rick and Morty, Lego
+* Create CSS themes for different game themes i.e. Star Wars, Lego
 * Games config to be split by themes in a games folder - make it easier to add themes and games to existing themes
