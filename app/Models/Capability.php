@@ -26,6 +26,11 @@ class Capability implements JsonSerializable
         $this->value      = $value;
     }
 
+    public function getCapability(): string
+    {
+        return $this->capability;
+    }
+
     public function jsonSerialize(): array
     {
         return [
