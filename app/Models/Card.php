@@ -38,8 +38,22 @@ class Card implements JsonSerializable
     {
         return [
             'name'         => $this->name,
-            'capabilities' => $this->capabilities,
+            'capabilities' => $this->capabilities->sort(function(Capability $a, Capability $b) {
+                return $this->compareCapabilities($a, $b);
+            })->values(),
             'imageUrl'     => $this->imageUrl,
         ];
+    }
+
+    private function compareCapabilities(Capability $capabilityA, Capability $capabilityB): int
+    {
+        $a = strtolower($capabilityA->getCapability());
+        $b = strtolower($capabilityB->getCapability());
+
+        if ($a === $b) {
+            return 0;
+        }
+
+        return ($a < $b) ? -1 : 1;
     }
 }
