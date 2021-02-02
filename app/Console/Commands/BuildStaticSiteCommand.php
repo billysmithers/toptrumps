@@ -49,12 +49,12 @@ class BuildStaticSiteCommand extends Command
     {
         foreach ($games as $themeKey => $themeParams) {
             foreach ($themeParams['games'] as $gameKey => $gameParams) {
-                $fetcher = App::make($gameParams['fetcher']);
-                $cards   = [];
-                $data    = $fetcher->fetch();
+                $resourceFetcher = App::make($gameParams['fetcher']);
+                $cards           = [];
+                $resources       = $resourceFetcher->fetch();
 
-                foreach ($data as $datum) {
-                    $cards[] = $gameParams['transformer']::transformForCard($datum);
+                foreach ($resources as $resource) {
+                    $cards[] = $gameParams['transformer']::transformForCard($resource);
                 }
 
                 $path = $themeKey . DIRECTORY_SEPARATOR . $gameKey;
