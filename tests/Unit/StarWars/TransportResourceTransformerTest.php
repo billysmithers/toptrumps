@@ -3,11 +3,11 @@
 namespace Tests\Unit\StarWars;
 
 use App\Models\Card;
-use App\Transformers\StarWars\TransportDataTransformer;
+use App\Transformers\StarWars\TransportResourceTransformer;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
-class TransportDataTransformerTest extends TestCase
+class TransportResourceTransformerTest extends TestCase
 {
     public function testCanTransformStarshipData(): void
     {
@@ -28,7 +28,7 @@ class TransportDataTransformerTest extends TestCase
         $this->assertEquals(
             json_encode($card),
             json_encode(
-                TransportDataTransformer::transformForCard(
+                TransportResourceTransformer::transformForCard(
                     [
                         'name'                   => 'Death Star',
                         'model'                  => 'DS-1 Orbital Battle Station',
@@ -65,7 +65,7 @@ class TransportDataTransformerTest extends TestCase
         $this->assertEquals(
             json_encode($card),
             json_encode(
-                TransportDataTransformer::transformForCard(
+                TransportResourceTransformer::transformForCard(
                     [
                         'cargo_capacity'         => '50000',
                         'consumables'            => '2 months',
@@ -101,7 +101,7 @@ class TransportDataTransformerTest extends TestCase
         $this->assertEquals(
             json_encode($card),
             json_encode(
-                TransportDataTransformer::transformForCard(
+                TransportResourceTransformer::transformForCard(
                     [
                         'name'                   => 'Death Star',
                         'model'                  => 'DS-1 Orbital Battle Station',
@@ -122,7 +122,7 @@ class TransportDataTransformerTest extends TestCase
         $this->assertEquals(
             json_encode($card),
             json_encode(
-                TransportDataTransformer::transformForCard(
+                TransportResourceTransformer::transformForCard(
                     [
                         'name'                   => 'Death Star',
                         'model'                  => 'DS-1 Orbital Battle Station',
@@ -160,7 +160,7 @@ class TransportDataTransformerTest extends TestCase
         $this->assertEquals(
             json_encode($card),
             json_encode(
-                TransportDataTransformer::transformForCard(
+                TransportResourceTransformer::transformForCard(
                     [
                         'name'                   => 'Death Star',
                         'model'                  => 'DS-1 Orbital Battle Station',
@@ -195,7 +195,7 @@ class TransportDataTransformerTest extends TestCase
         $this->assertEquals(
             json_encode($card),
             json_encode(
-                TransportDataTransformer::transformForCard(
+                TransportResourceTransformer::transformForCard(
                     [
                         'name'                   => 'Death Star',
                         'model'                  => 'DS-1 Orbital Battle Station',
@@ -230,7 +230,7 @@ class TransportDataTransformerTest extends TestCase
         $this->assertEquals(
             json_encode($card),
             json_encode(
-                TransportDataTransformer::transformForCard(
+                TransportResourceTransformer::transformForCard(
                     [
                         'name'                   => 'Death Star',
                         'model'                  => 'DS-1 Orbital Battle Station',
@@ -253,7 +253,7 @@ class TransportDataTransformerTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
 
-        TransportDataTransformer::transformForCard(
+        TransportResourceTransformer::transformForCard(
             [
                 'model'                  => 'DS-1 Orbital Battle Station',
                 'cost_in_credits'        => '1000000000000',

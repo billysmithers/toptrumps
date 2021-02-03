@@ -3,11 +3,11 @@
 namespace Tests\Unit\Lego;
 
 use App\Models\Card;
-use App\Transformers\Lego\SetsDataTransformer;
+use App\Transformers\Lego\SetResourceTransformer;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
-class SetsDataTransformerTest extends TestCase
+class SetResourceTransformerTest extends TestCase
 {
     public function testCanTransformSetData(): void
     {
@@ -24,7 +24,7 @@ class SetsDataTransformerTest extends TestCase
         $this->assertEquals(
             json_encode($card),
             json_encode(
-                SetsDataTransformer::transformForCard(
+                SetResourceTransformer::transformForCard(
                     [
                         'set_num'          => '0011-2',
                         'name'             => 'Town Mini-Figures',
@@ -44,7 +44,7 @@ class SetsDataTransformerTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
 
-        SetsDataTransformer::transformForCard(
+        SetResourceTransformer::transformForCard(
             [
                 'set_num'          => '0011-2',
                 'year'             => 1978,

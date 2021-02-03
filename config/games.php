@@ -3,8 +3,8 @@
 use App\Api\Lego\SetsFetcher;
 use App\Api\StarWars\StarshipsFetcher;
 use App\Api\StarWars\VehiclesFetcher;
-use App\Transformers\Lego\SetsDataTransformer;
-use App\Transformers\StarWars\TransportDataTransformer;
+use App\Transformers\Lego\SetResourceTransformer;
+use App\Transformers\StarWars\TransportResourceTransformer;
 
 return [
     'starwars' => [
@@ -13,13 +13,13 @@ return [
             'starships' => [
                 'name'        => 'Star Wars Starships',
                 'fetcher'     => StarshipsFetcher::class,
-                'transformer' => TransportDataTransformer::class,
+                'transformer' => TransportResourceTransformer::class,
                 'credits'     => 'Data supplied by https://swapi.dev',
             ],
             'vehicles' => [
                 'name'        => 'Star Wars Vehicles',
                 'fetcher'     => VehiclesFetcher::class,
-                'transformer' => TransportDataTransformer::class,
+                'transformer' => TransportResourceTransformer::class,
                 'credits'     => 'Data supplied by https://swapi.dev',
             ],
         ],
@@ -30,7 +30,7 @@ return [
             'sets' => [
                 'name'        => 'Lego sets',
                 'fetcher'     => SetsFetcher::class,
-                'transformer' => SetsDataTransformer::class,
+                'transformer' => SetResourceTransformer::class,
                 'credits'     => 'Data supplied by https://rebrickable.com',
             ],
         ],
