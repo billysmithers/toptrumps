@@ -11,15 +11,31 @@ use Illuminate\Support\Facades\Log;
 use InvalidArgumentException;
 use JsonException;
 
-class TransportFetcher
+abstract class ResourceFetcher implements Fetcher
 {
     use LogsApiException;
+
+    protected const FILMS = 'films/';
+
+    protected const PEOPLE = 'people/';
+
+    protected const PLANETS = 'planets/';
+
+    protected const SPECIES = 'species/';
+
+    protected const STARSHIPS = 'starships/';
+
+    protected const VEHICLES = 'vehicles/';
 
     private const NUMBER_OF_RESOURCES = 32;
 
     private const VALID_RESOURCES = [
-        'starships/',
-        'vehicles/',
+        self::FILMS,
+        self::PEOPLE,
+        self::PLANETS,
+        self::SPECIES,
+        self::STARSHIPS,
+        self::VEHICLES,
     ];
 
     private Client $client;
@@ -29,11 +45,11 @@ class TransportFetcher
         $this->client = $client;
     }
 
-    protected function fetchByTransportType(string $type): array
+    protected function fetchByResourceType(string $type): array
     {
         if (! in_array($type, self::VALID_RESOURCES)) {
             throw new InvalidArgumentException(
-                'Type of transport must be one of the following '
+                'Type of resource must be one of the following '
                 . implode(' ', self::VALID_RESOURCES)
             );
         }
@@ -46,8 +62,8 @@ class TransportFetcher
         }
 
         do {
-            foreach ($page['results'] ?? [] as $starship) {
-                $resources[] = $starship;
+            foreach ($page['results'] ?? [] as $result) {
+                $resources[] = $result;
             }
 
             if (! empty($page['next'])) {

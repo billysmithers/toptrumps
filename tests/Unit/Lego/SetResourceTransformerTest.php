@@ -24,7 +24,7 @@ class SetResourceTransformerTest extends TestCase
         $this->assertEquals(
             json_encode($card),
             json_encode(
-                SetResourceTransformer::transformForCard(
+                SetResourceTransformer::forCard(
                     [
                         'set_num'          => '0011-2',
                         'name'             => 'Town Mini-Figures',
@@ -44,7 +44,7 @@ class SetResourceTransformerTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
 
-        SetResourceTransformer::transformForCard(
+        SetResourceTransformer::forCard(
             [
                 'set_num'          => '0011-2',
                 'year'             => 1978,

@@ -54,7 +54,7 @@ class BuildStaticSiteCommand extends Command
                 $resources       = $resourceFetcher->fetch();
 
                 foreach ($resources as $resource) {
-                    $cards[] = $gameParams['transformer']::transformForCard($resource);
+                    $cards[] = $gameParams['transformer']::forCard($resource);
                 }
 
                 $path = $themeKey . DIRECTORY_SEPARATOR . $gameKey;

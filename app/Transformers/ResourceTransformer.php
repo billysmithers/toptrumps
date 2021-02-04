@@ -10,5 +10,5 @@ interface ResourceTransformer
      * @param array $resource
      * @return Card
      */
-    public static function transformForCard(array $resource): Card;
+    public static function forCard(array $resource): Card;
 }
