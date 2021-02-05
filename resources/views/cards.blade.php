@@ -24,8 +24,8 @@
                             @if (! empty($card->imageUrl))
                                 <div class="photo-wrapper p-2">
                                     <img
-                                        class="w-48 h-48 mx-auto"
-                                        src="{{ $card->imageUrl }}"
+                                        class="w-48 mx-auto"
+                                        src="data:image/jpeg;base64, {{ $card->imageUrl }}"
                                         alt="Image of {{ $card->name }}"
                                     >
                                 </div>

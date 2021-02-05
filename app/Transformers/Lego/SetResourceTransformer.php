@@ -6,6 +6,7 @@ namespace App\Transformers\Lego;
 
 use App\Transformers\ResourceTransformer;
 use App\Models\Card;
+use Intervention\Image\Facades\Image;
 use InvalidArgumentException;
 
 class SetResourceTransformer implements ResourceTransformer
@@ -47,6 +48,8 @@ class SetResourceTransformer implements ResourceTransformer
 
         unset($capabilities['theme_id']);
 
-        return new Card($resource['name'], $capabilities, $resource['set_img_url']);
+        $image = (string) Image::make($resource['set_img_url'])->fit(48)->encode('data-url');
+
+        return new Card($resource['name'], $capabilities, $image);
     }
 }
