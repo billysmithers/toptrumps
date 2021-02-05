@@ -8,9 +8,9 @@
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
-    <body class="bg-blue-400 font-mono text-white">
+    <body class="bg-gray-100 font-mono text-black">
         <div class="container mx-auto md:px-24 lg:px-52">
-            <a href="/" class="p-4">Games</a>
+            <a href="/" class="p-4 block">Games</a>
             <h1 class="text-center text-3xl m-10">{{ $game }}</h1>
 
             <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
@@ -33,7 +33,7 @@
                                 <table class="text-xs my-3">
                                     <tbody>
                                         @foreach ($card->capabilities as $capability)
-                                            <tr class="{{ $loop->index % 2 === 0 ? ' bg-gray-100' : 'bg-white' }}">
+                                            <tr class="{{ $loop->index % 2 === 0 ? ' bg-yellow-300' : 'bg-yellow-100' }}">
                                                 <td class="px-2 py-2 text-gray-500 font-semibold">
                                                     {{ $capability->capability }}
                                                 </td>
