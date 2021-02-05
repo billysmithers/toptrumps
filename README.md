@@ -33,6 +33,8 @@ or using sail
 
 ## Roadmap
 
+* Make the command more robust - only publish pages and links to said pages if content generated
+* Image manipulation so images are not called directly from third party but made to fit and base64 encoded (work offline)
 * Add caching for the API calls so as not to hammer the APIs
 * Create a Vue game component to actually play the game (with a crude algorithm for choosing the computer players choice)
 * An enhanced algorithm for the computers choice using machine learning
