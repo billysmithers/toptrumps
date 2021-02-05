@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
+    <meta>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Play the classic Top Trumps card game! This card set is based on {{ $game }}.">
 
         <title>Top Trumps - {{ $game }}</title>
 
@@ -17,9 +18,9 @@
                 @foreach ($cards as $card)
                     <div class="max-w-xs m-4">
                         <div class="bg-white shadow-xl rounded-lg py-3">
-                            <h3 class="text-center text-xl text-gray-900 font-medium leading-8">
+                            <h2 class="text-center text-xl text-gray-900 font-medium leading-8">
                                 {{ $card->name }}
-                            </h3>
+                            </h2>
                             @if (! empty($card->imageUrl))
                                 <div class="photo-wrapper p-2">
                                     <img
