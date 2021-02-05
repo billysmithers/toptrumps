@@ -34,7 +34,7 @@
                                     <tbody>
                                         @foreach ($card->capabilities as $capability)
                                             <tr class="{{ $loop->index % 2 === 0 ? ' bg-yellow-300' : 'bg-yellow-100' }}">
-                                                <td class="px-2 py-2 text-gray-500 font-semibold">
+                                                <td class="px-2 py-2 text-black font-semibold">
                                                     {{ $capability->capability }}
                                                 </td>
                                                 <td class="px-2 py-2 text-black">
